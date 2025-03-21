@@ -1,0 +1,69 @@
+<html>
+  <script>
+    let price = 10.24;
+    let quantity = 20;
+    console.log("Total ", price * quantity);
+
+    let largeNum = 2e3; // 2 * (10 power 3) //E is same with 10** (exponential)
+    console.log("largeNum 2E3 = ", largeNum);
+    console.log(2 * 10 ** 3);
+
+    // seperator
+    let oneLakh = 100_000;
+    console.log("one lakh ", oneLakh);
+
+    // arithmetic operator (operator do operation)
+    let a = 10;
+    let b = 2;
+
+    console.log(a + " + ", b + " = ", a + b);
+    console.log(a + " - ", b + " = ", a - b);
+    console.log(a + " * ", b + " = ", a * b);
+    console.log(a + " % ", b + " = ", a % b); // modulus
+    console.log(a + " ** ", b + " = ", a ** b); // exponential
+
+    // Math global object
+    console.log("Round 3/2 is ", Math.round(3 / 2));
+
+    // positive infinity (same with positiver number is divided by 0)
+    // negative infinity (same with negativer number is divided by 0)
+    console.log("positive infinity ", Number.POSITIVE_INFINITY);
+
+    console.log("Max value ", Number.MAX_VALUE);
+    let minValue = Number.MIN_VALUE;
+    console.log("Min value ", minValue);
+
+    let c = minValue + 1;
+    console.log(c);
+
+    //NaN
+    let d = 0 / 0;
+    console.log("d is ", d);
+    //when do operation with NaN you will always get NaN
+    console.log("d + 1", d + 1);
+
+    let positiveZero = 0;
+    let negativeZero = -0; // why 0 has negative sign // coz of computer number storing system (sign bit)
+    console.log("positiveZero ", positiveZero);
+    console.log("negativeZero ", negativeZero);
+    console.log(
+      "positive zero is equal to negative zero ",
+      positiveZero === negativeZero
+    );
+
+    // but not equal to in infinity operation
+    console.log("operation with positive zero ", 1 / positiveZero);
+    console.log("operation with negative zero ", 1 / negativeZero);
+
+    // Rounding error
+    console.log("Rounding error for 0.3 - 0.2 not get 0.1", 0.3 - 0.2 === 0.1); // not for every floating point only for 0.1 coz of IEEE754 formatter
+    // so you shouldn't same check on floating point directly // not should check equality
+    // you could check using EPSILON (small number)
+    console.log("with EPSILON ", Math.abs(a - b) < Number.EPLISON);
+    // if you want to check floating equality, you could use "float-equal" library
+
+    // So financial application not use js?
+    // actually "decimal type" safe for rounding error
+    // js doesn't have "decimal type" but you can use decimal.js package// but a little slow
+  </script>
+</html>

@@ -1,0 +1,17 @@
+<html>
+  <script>
+    let greet = "Hello " + "Khaing"; // if you want more than one line concat use "+"
+    // putting variable in string can be called "interpolation"
+    let price = 10;
+    let quantity = 20;
+    let voucher =
+      "price " + price + " quantity " + quantity + " total " + price * quantity;
+    console.log("voucher ", voucher);
+
+    //without interpolation
+    //template string
+    console.log(
+      `price ${price} quantity  ${quantity}  total  ${price * quantity}`
+    );
+  </script>
+</html>
