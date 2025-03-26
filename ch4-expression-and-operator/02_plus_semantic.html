@@ -1,0 +1,33 @@
+<html>
+  <script>
+    //same sentence and different semantic
+    let a = 5;
+    let b = a + 5; //semantic 1
+    console.log("sementic 1 ", b);
+
+    a = "hello";
+    b = a + 5; //semantic 2
+    console.log("sementic 2 ", b);
+
+    let obj = {
+      valueOf() {
+        console.log("valueOf called");
+        return 2;
+      },
+      toString() {
+        console.log("toString called");
+        return 10;
+      },
+    };
+    let c = 2;
+    let data = obj + c;
+    //step1 => change obj to primitive type
+    // first call valueOf (if valueOf not return primitive type) then call toString
+    // if toString return obj type then got error
+    console.log("Data ", data);
+    // console.log(obj.valueOf()); // built in
+    // console.log(obj.toString()); // built in
+
+    // Date is oppositive to above condition (call toString first)
+  </script>
+</html>

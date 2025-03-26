@@ -1,0 +1,102 @@
+<html>
+  <script>
+    /*
+    expression (that returns a value)
+    3 expression
+    2+1 expression
+    arr[1] expression
+    return funtion() expression
+    let a = 10; //statement
+    a = 10; // expression
+    a // expression (primary expression) you can not split anymore
+    10 // expression
+
+    */
+
+    //array
+    // [10,20,30] => expression
+    let arr = [10, 20, 30];
+    console.log(arr);
+
+    // object
+    /*
+    {
+      name: "ktz",
+      age: 28,
+    } => (complex expression)
+     */
+    let obj = {
+      name: "ktz",
+      age: 28,
+      //   address: {
+      //     city: "YGN",
+      //     street: "TGG",
+      //   },
+    };
+    console.log(obj.name); // obj.name => property access expression
+    console.log(obj["name"]);
+    console.log(obj?.address?.city); // conditional access is safe for program
+
+    function hello() {
+      console.log("hello");
+    }
+    hello(); // invocation expression
+
+    // conditional access
+    let fun = hello;
+    fun?.();
+
+    // object creation expression
+    let date = new Date();
+    console.log(date);
+
+    let a = 10;
+    let b = 20;
+    let c = a + b;
+    console.log(c);
+
+    // a and b are operant
+    // + is operator
+
+    // operator precedence // do high precedence first
+    let aaa = 1 * 3 + 2;
+    console.log(aaa);
+    console.log("1*3*2", 1 * 3 * 2);
+
+    // associativity (if same precedence order, l-r or r-l)
+    let bb = 3;
+    let cc = 2;
+    let d = 1;
+    console.log("bb**c ", bb ** cc);
+    // most of other operator same precedence's associativity is l-r
+    // ** exponent and assignment is (r-l)
+    console.log("bb**d**c ", bb ** (d ** cc));
+
+    console.log(1 + 2 * 3 ** 2 + 4 ** 2 / 5);
+    /*
+    **
+    *,/
+    +
+    calculation order
+    1+2*3**2+16/5
+    1+2*9+16/5
+    1+18+16/5
+    1+18+3.2
+    19+3.2
+    22.2
+    */
+
+    // precendence order
+    /*
+    Unary operator
+      r to l
+    Binary operator
+      Arithmetic
+        **
+        *,/
+        +-
+    Bitwise
+    Relational operator
+    */
+  </script>
+</html>
